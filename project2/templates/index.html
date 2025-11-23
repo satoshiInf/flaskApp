@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>レビュー</title>
+</head>
+<body>
+        <h1>レビュー投稿フォーム</h1>
+
+        <!--methodsで書かない、methodでかかないと動かない-->
+        <form action="/add" method="post">
+            <input type ="text" name="content" placeholder="内容" required>
+            <button type= "submit"> 投稿 </button>
+        </form>
+
+        <ul>
+            {% for review in reviews %}
+            <li>{{ review }} </li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
