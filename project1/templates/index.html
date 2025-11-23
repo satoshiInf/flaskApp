@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>掲示板（DBなし）</title>
+</head>
+<body>
+    <h1>データベースなし掲示板</h1>
+    <form method="POST" action="/add">
+        <input type="text" name="content" placeholder="投稿内容" required>
+        <button type="submit">投稿</button>
+    </form>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
